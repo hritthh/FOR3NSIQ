@@ -1,0 +1,6 @@
+{
+  "name": "for3nsiq-site",
+  "private": true,
+  "description": "FOR3NSIQ project portfolio: static site with a sign-in gate (middleware.js). No dependencies, no build step.",
+  "type": "module"
+}
