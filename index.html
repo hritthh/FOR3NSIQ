@@ -22,12 +22,12 @@
 <meta name="theme-color" content="#013d39">
 <!-- Link preview (Teams, Outlook, WhatsApp). Keep these in step with login.html, which is what
      a preview sees while sign-in is on. og:image needs the full https:// address of the live site:
-     if Vercel gives you a different domain than for3nsiq.vercel.app, change it here and in login.html. -->
+     if the site moves to another domain than for3nsiq-five.vercel.app, change it here and in login.html. -->
 <meta property="og:site_name" content="FOR3NSIQ">
 <meta property="og:title" content="FOR3NSIQ">
 <meta property="og:description" content="Surface Equipment Optimisation with AI: targets, AI agents, workflow and MVP timeline for each FOR3NSIQ project.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://for3nsiq.vercel.app/assets/img/hero-share.jpg">
+<meta property="og:image" content="https://for3nsiq-five.vercel.app/assets/img/hero-share.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -96,11 +96,12 @@
     </button>
     <nav class="site-nav" id="site-menu" aria-label="Primary">
       <ul class="site-nav__list">
-        <li><a href="#projects" data-nav="projects">Projects</a></li>
         <li><a href="#targets" data-nav="targets">Targets</a></li>
+        <li><a href="#projects" data-nav="projects">Projects</a></li>
         <li><a href="#timeline" data-nav="timeline">MVP timeline</a></li>
         <li><a href="#architecture" data-nav="architecture">Architecture</a></li>
-        <li><a href="#partners" data-nav="partners">Partners</a></li>
+        <li><a href="#highlights" data-nav="highlights">Highlights</a></li>
+        <li><a href="#about" data-nav="about">About us</a></li>
       </ul>
       <a class="btn btn--bright btn--sm site-nav__cta" href="#projects">Explore projects <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <a class="signout" href="/logout" data-signout title="Sign out" hidden>
@@ -179,7 +180,7 @@
       <li><a class="jump-card__item" href="#targets"><span class="jump-card__num">1</span><span class="jump-card__text"><strong>Targets</strong><span>Headline commitments</span></span><svg class="icon jump-card__go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
       <li><a class="jump-card__item" href="#projects"><span class="jump-card__num">2</span><span class="jump-card__text"><strong>Projects</strong><span>Six AI projects in detail</span></span><svg class="icon jump-card__go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
       <li><a class="jump-card__item" href="#timeline"><span class="jump-card__num">3</span><span class="jump-card__text"><strong>MVP timeline</strong><span>When MVP 1 and MVP 2 land</span></span><svg class="icon jump-card__go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
-      <li><a class="jump-card__item" href="#partners"><span class="jump-card__num">4</span><span class="jump-card__text"><strong>Partners</strong><span>Who is building it</span></span><svg class="icon jump-card__go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      <li><a class="jump-card__item" href="#about"><span class="jump-card__num">4</span><span class="jump-card__text"><strong>About us</strong><span>Partners &amp; the team</span></span><svg class="icon jump-card__go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
     </ol>
   </nav>
 
@@ -191,8 +192,16 @@
         <h2 class="section-title" id="aspiration-title">The transformation FOR3NSIQ is aiming for</h2>
       </div>
       <ul class="aspiration-grid" data-reveal-stagger>
-        <li class="aspiration-item"><strong>&lt;$6/BOE &amp; CI 17kg</strong><span>Cost &amp; carbon per barrel</span></li>
-        <li class="aspiration-item aspiration-item--accent"><strong>Lean workforce</strong><span>AI-driven operations</span></li>
+        <!-- Each picture is the card's background; its empty left side holds the text (on narrow cards the
+             picture becomes a band above the text). -->
+        <li class="aspiration-item">
+          <img class="aspiration-item__bg" src="assets/img/asp-cost-768.jpg" srcset="assets/img/asp-cost-768.jpg 768w, assets/img/asp-cost-1536.jpg 1536w" sizes="(min-width: 760px) 50vw, 100vw" width="1536" height="1024" alt="" loading="lazy" decoding="async">
+          <div class="aspiration-item__text"><strong>&lt;$6/BOE &amp; CI&nbsp;17kg</strong><span>Cost &amp; carbon per barrel</span></div>
+        </li>
+        <li class="aspiration-item aspiration-item--accent">
+          <img class="aspiration-item__bg" src="assets/img/asp-ops-768.jpg" srcset="assets/img/asp-ops-768.jpg 768w, assets/img/asp-ops-1536.jpg 1536w" sizes="(min-width: 760px) 50vw, 100vw" width="1536" height="1024" alt="" loading="lazy" decoding="async">
+          <div class="aspiration-item__text"><strong>Lean workforce</strong><span>AI-driven operations</span></div>
+        </li>
       </ul>
     </div>
   </section>
@@ -285,7 +294,7 @@
             <p class="project-card__tier">Tier 1 · Data foundation</p>
             <h3 class="project-card__title">SAP PM Data Revitalisation</h3>
             <p class="project-card__summary">Cleans, validates and governs SAP PM/EAM master data so every FOR3NSIQ solution starts from a reliable data foundation.</p>
-            <ul class="chip-list"><li class="chip chip--accent">84% productivity time reduction</li><li class="chip">6 AI agents</li><li class="chip">Tridiagonal.ai</li></ul>
+            <ul class="chip-list"><li class="chip chip--accent">84% productivity time reduction</li><li class="chip">6 AI agents</li></ul>
             <p class="project-card__foot"><span><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg> MVP 1 · Oct 2026</span><span class="project-card__more">Explore <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></p>
           </div></a></li>
         <li><a class="project-card" href="#project-2b">
@@ -335,18 +344,27 @@
           </div></a></li>
       </ul>
 
-      <div class="support" data-reveal>
-        <h3 class="support__title">Supporting solutions in the FOR3NSIQ portfolio</h3>
-        <ul class="support-grid" data-reveal-stagger>
-          <li><a class="support-card" href="#solution-gai">
-            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-cloud"/></svg></span>
-            <span class="support-card__text"><strong>Infrastructure with Generative AI</strong><span>Tier 1 · Platform &amp; infrastructure · IBM Malaysia</span></span>
-            <svg class="icon support-card__go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
-          <li><a class="support-card" href="#solution-hse">
-            <span class="icon-badge"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg></span>
-            <span class="support-card__text"><strong>AI-Driven HSE &amp; PSM</strong><span>&#8595;30% near-misses · &#8595;50% study cycle time</span></span>
-            <svg class="icon support-card__go" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>        </ul>
-      </div>
+      <!-- The two supporting solutions: same cards as the projects, centred as a pair below them -->
+      <ul class="project-grid project-grid--pair" aria-label="Supporting solutions" data-reveal-stagger>
+        <li><a class="project-card" href="#solution-gai">
+          <div class="project-card__media"><img src="assets/img/sol-gai-640.jpg" srcset="assets/img/sol-gai-640.jpg 640w, assets/img/sol-gai-1280.jpg 1280w" sizes="(min-width: 1100px) 380px, (min-width: 700px) 46vw, 92vw" width="640" height="427" alt="" loading="lazy" decoding="async"><span class="code-badge code-badge--float"><svg class="icon" aria-hidden="true"><use href="#i-cloud"/></svg></span></div>
+          <div class="project-card__body">
+            <p class="project-card__tier">Tier 1 · Platform &amp; infrastructure</p>
+            <h3 class="project-card__title">Infrastructure with Generative AI</h3>
+            <p class="project-card__summary">An enterprise-grade cloud platform: a secure, scalable, standardised foundation for designing, developing and deploying AI solutions within PCSB.</p>
+            <ul class="chip-list"><li class="chip chip--accent">Secure AI hosting</li></ul>
+            <p class="project-card__foot"><span><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg> Supporting solution</span><span class="project-card__more">Explore <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></p>
+          </div></a></li>
+        <li><a class="project-card" href="#solution-hse">
+          <div class="project-card__media"><img src="assets/img/sol-hse-640.jpg" srcset="assets/img/sol-hse-640.jpg 640w, assets/img/sol-hse-1280.jpg 1280w" sizes="(min-width: 1100px) 380px, (min-width: 700px) 46vw, 92vw" width="640" height="427" alt="" loading="lazy" decoding="async"><span class="code-badge code-badge--float"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg></span></div>
+          <div class="project-card__body">
+            <p class="project-card__tier">Competitive edge · HSE &amp; process safety</p>
+            <h3 class="project-card__title">AI-Driven HSE &amp; PSM</h3>
+            <p class="project-card__summary">Shifts HSE and Process Safety Management from reactive, compliance-driven practice to predictive, risk-based management and prevention.</p>
+            <ul class="chip-list"><li class="chip chip--accent">&#8595;30% near-misses</li><li class="chip">&#8595;50% study cycle time</li></ul>
+            <p class="project-card__foot"><span><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg> Supporting solution</span><span class="project-card__more">Explore <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></p>
+          </div></a></li>
+      </ul>
     </div>
   </section>
 
@@ -358,43 +376,86 @@
           <p class="eyebrow">MVP timeline</p>
           <h2 class="section-title" id="timeline-title">FOR3NSIQ consolidated MVP timeline</h2>
         </div>
-        <p class="section-lead">All six projects started in August 2026. Here are their MVP 1 and MVP 2 dates and key deliverables.</p>
+        <p class="section-lead">All six projects started in August 2026. Hover over, or tap, an MVP milestone on the timeline to see what it delivers.</p>
       </div>
 
-      <!-- Visual summary of the table below (hidden from screen readers; the table carries the data).
-           Columns are months from Aug 2026 (0) to Apr 2027 (8). --s = start, --m = MVP 1, --e = MVP 2. -->
-      <div class="gantt card" data-reveal aria-hidden="true" data-start-year="2026" data-start-month="8" data-months="9" style="--months:9">
-        <div class="gantt__legend"><span><i class="gantt__dot gantt__dot--0"></i>Project start</span><span><i class="gantt__dot gantt__dot--1"></i>MVP 1</span><span><i class="gantt__dot gantt__dot--2"></i>MVP 2</span><span class="gantt__legend-today"><i></i>Today</span></div>
-        <div class="gantt__row gantt__row--head">
+      <!-- Interactive timeline: hover, focus or tap a milestone (MVP 1 circle, MVP 2 diamond) to see its
+           deliverables. Columns are months from Aug 2026 (0) to Apr 2027 (8): --s = start, --m = MVP 1,
+           --e = MVP 2. TO EDIT A DELIVERABLE: change the text inside its <span class="gantt__tip">. -->
+      <div class="gantt card" data-reveal data-start-year="2026" data-start-month="8" data-months="9" style="--months:9">
+        <div class="gantt__legend" aria-hidden="true"><span><i class="gantt__dot gantt__dot--0"></i>Project start</span><span><i class="gantt__dot gantt__dot--1"></i>MVP 1</span><span><i class="gantt__dot gantt__dot--2"></i>MVP 2</span><span class="gantt__legend-today"><i></i>Today</span><span class="gantt__hint"><span class="hint-pointer">Hover a milestone for its deliverables</span><span class="hint-touch">Tap a milestone for its deliverables</span></span></div>
+        <div class="gantt__row gantt__row--head" aria-hidden="true">
           <span></span>
           <div class="gantt__months"><span>Aug<small>2026</small></span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan<small>2027</small></span><span>Feb</span><span>Mar</span><span>Apr</span></div>
         </div>
         <div class="gantt__body">
-        <div class="gantt__row"><span class="gantt__label"><span class="code-badge">2A</span>SAP PM Data Revitalisation</span><div class="gantt__track"><span class="gantt__bar" style="--s:0;--m:2;--e:5;--i:0"><i class="gantt__dot gantt__dot--0"></i><i class="gantt__dot gantt__dot--1"></i><i class="gantt__dot gantt__dot--2"></i></span></div></div>
-        <div class="gantt__row"><span class="gantt__label"><span class="code-badge">2B</span>Vision Analytics</span><div class="gantt__track"><span class="gantt__bar" style="--s:0;--m:3;--e:5;--i:1"><i class="gantt__dot gantt__dot--0"></i><i class="gantt__dot gantt__dot--1"></i><i class="gantt__dot gantt__dot--2"></i></span></div></div>
-        <div class="gantt__row"><span class="gantt__label"><span class="code-badge">3A</span>Asset Integrity</span><div class="gantt__track"><span class="gantt__bar" style="--s:0;--m:4;--e:8;--i:2"><i class="gantt__dot gantt__dot--0"></i><i class="gantt__dot gantt__dot--1"></i><i class="gantt__dot gantt__dot--2"></i></span></div></div>
-        <div class="gantt__row"><span class="gantt__label"><span class="code-badge">4A</span>Maintenance &amp; Reliability</span><div class="gantt__track"><span class="gantt__bar" style="--s:0;--m:4;--e:8;--i:3"><i class="gantt__dot gantt__dot--0"></i><i class="gantt__dot gantt__dot--1"></i><i class="gantt__dot gantt__dot--2"></i></span></div></div>
-        <div class="gantt__row"><span class="gantt__label"><span class="code-badge">6A</span>Production Optimisation</span><div class="gantt__track"><span class="gantt__bar" style="--s:0;--m:4;--e:8;--i:4"><i class="gantt__dot gantt__dot--0"></i><i class="gantt__dot gantt__dot--1"></i><i class="gantt__dot gantt__dot--2"></i></span></div></div>
-        <div class="gantt__row"><span class="gantt__label"><span class="code-badge">7</span>Work Process Efficiency</span><div class="gantt__track"><span class="gantt__bar" style="--s:0;--m:3;--e:5;--i:5"><i class="gantt__dot gantt__dot--0"></i><i class="gantt__dot gantt__dot--1"></i><i class="gantt__dot gantt__dot--2"></i></span></div></div>
+        <div class="gantt__row"><a class="gantt__label" href="#project-2a"><span class="code-badge">2A</span>SAP PM Data Revitalisation</a><div class="gantt__track"><span class="gantt__bar" style="--s:0;--m:2;--e:5;--i:0"><i class="gantt__dot gantt__dot--0"></i>
+          <span class="gantt__ms gantt__ms--1"><button class="gantt__dot gantt__dot--1" type="button" aria-describedby="ms-2a-1"><span class="sr-only">2A MVP 1, October 2026</span></button><span class="gantt__tip" id="ms-2a-1" role="tooltip"><span class="gantt__tip-head"><b>2A · MVP 1</b>Oct 2026</span>Deliver SAP data remediation using 6 agents for Bokor.</span></span>
+          <span class="gantt__ms gantt__ms--2"><button class="gantt__dot gantt__dot--2" type="button" aria-describedby="ms-2a-2"><span class="sr-only">2A MVP 2, January 2027</span></button><span class="gantt__tip" id="ms-2a-2" role="tooltip"><span class="gantt__tip-head"><b>2A · MVP 2</b>Jan 2027</span>Deliver SAP data remediation using 6 agents for the remaining 25 assets.</span></span>
+        </span></div></div>
+        <div class="gantt__row"><a class="gantt__label" href="#project-2b"><span class="code-badge">2B</span>Vision Analytics</a><div class="gantt__track"><span class="gantt__bar" style="--s:0;--m:3;--e:5;--i:1"><i class="gantt__dot gantt__dot--0"></i>
+          <span class="gantt__ms gantt__ms--1"><button class="gantt__dot gantt__dot--1" type="button" aria-describedby="ms-2b-1"><span class="sr-only">2B MVP 1, November 2026</span></button><span class="gantt__tip" id="ms-2b-1" role="tooltip"><span class="gantt__tip-head"><b>2B · MVP 1</b>Nov 2026</span>Pilot model configuration; anomaly and corrosion detection; integration, validation and UAT.</span></span>
+          <span class="gantt__ms gantt__ms--2"><button class="gantt__dot gantt__dot--2" type="button" aria-describedby="ms-2b-2"><span class="sr-only">2B MVP 2, January 2027</span></button><span class="gantt__tip" id="ms-2b-2" role="tooltip"><span class="gantt__tip-head"><b>2B · MVP 2</b>Jan 2027</span>Rollout to two additional sites; training, hypercare, offline capability and handover.</span></span>
+        </span></div></div>
+        <div class="gantt__row"><a class="gantt__label" href="#project-3a"><span class="code-badge">3A</span>Asset Integrity</a><div class="gantt__track"><span class="gantt__bar" style="--s:0;--m:4;--e:8;--i:2"><i class="gantt__dot gantt__dot--0"></i>
+          <span class="gantt__ms gantt__ms--1"><button class="gantt__dot gantt__dot--1" type="button" aria-describedby="ms-3a-1"><span class="sr-only">3A MVP 1, December 2026</span></button><span class="gantt__tip" id="ms-3a-1" role="tooltip"><span class="gantt__tip-head"><b>3A · MVP 1</b>Dec 2026</span>Bokor integrity models; circuitisation, integrity mapping, risk prioritisation and recommendation-to-work workflow.</span></span>
+          <span class="gantt__ms gantt__ms--2"><button class="gantt__dot gantt__dot--2" type="button" aria-describedby="ms-3a-2"><span class="sr-only">3A MVP 2, April 2027</span></button><span class="gantt__tip" id="ms-3a-2" role="tooltip"><span class="gantt__tip-head"><b>3A · MVP 2</b>Apr 2027</span>Scale to KNNAG and a third asset; optimised scheduling and integrated work-pack capability.</span></span>
+        </span></div></div>
+        <div class="gantt__row"><a class="gantt__label" href="#project-4a"><span class="code-badge">4A</span>Maintenance &amp; Reliability</a><div class="gantt__track"><span class="gantt__bar" style="--s:0;--m:4;--e:8;--i:3"><i class="gantt__dot gantt__dot--0"></i>
+          <span class="gantt__ms gantt__ms--1"><button class="gantt__dot gantt__dot--1" type="button" aria-describedby="ms-4a-1"><span class="sr-only">4A MVP 1, December 2026</span></button><span class="gantt__tip" id="ms-4a-1" role="tooltip"><span class="gantt__tip-head"><b>4A · MVP 1</b>Dec 2026</span>Bokor asset-health models; failure-risk/RUL capability; AI-assisted RCFA and recommendation workflow.</span></span>
+          <span class="gantt__ms gantt__ms--2"><button class="gantt__dot gantt__dot--2" type="button" aria-describedby="ms-4a-2"><span class="sr-only">4A MVP 2, April 2027</span></button><span class="gantt__tip" id="ms-4a-2" role="tooltip"><span class="gantt__tip-head"><b>4A · MVP 2</b>Apr 2027</span>Scale to KNNAG and a third asset; optimised scheduling, material readiness and integrated work packs.</span></span>
+        </span></div></div>
+        <div class="gantt__row"><a class="gantt__label" href="#project-6a"><span class="code-badge">6A</span>Production Optimisation</a><div class="gantt__track"><span class="gantt__bar" style="--s:0;--m:4;--e:8;--i:4"><i class="gantt__dot gantt__dot--0"></i>
+          <span class="gantt__ms gantt__ms--1"><button class="gantt__dot gantt__dot--1" type="button" aria-describedby="ms-6a-1"><span class="sr-only">6A MVP 1, December 2026</span></button><span class="gantt__tip" id="ms-6a-1" role="tooltip"><span class="gantt__tip-head"><b>6A · MVP 1</b>Dec 2026</span>Bokor production models; contextualisation, dashboards, alerts, optimisation recommendations and UAT.</span></span>
+          <span class="gantt__ms gantt__ms--2"><button class="gantt__dot gantt__dot--2" type="button" aria-describedby="ms-6a-2"><span class="sr-only">6A MVP 2, April 2027</span></button><span class="gantt__tip" id="ms-6a-2" role="tooltip"><span class="gantt__tip-head"><b>6A · MVP 2</b>Apr 2027</span>Deploy and validate production-optimisation models at KNNAG and the third pilot asset.</span></span>
+        </span></div></div>
+        <div class="gantt__row"><a class="gantt__label" href="#project-7"><span class="code-badge">7</span>Work Process Efficiency</a><div class="gantt__track"><span class="gantt__bar" style="--s:0;--m:3;--e:5;--i:5"><i class="gantt__dot gantt__dot--0"></i>
+          <span class="gantt__ms gantt__ms--1"><button class="gantt__dot gantt__dot--1" type="button" aria-describedby="ms-7-1"><span class="sr-only">7 MVP 1, November 2026</span></button><span class="gantt__tip" id="ms-7-1" role="tooltip"><span class="gantt__tip-head"><b>7 · MVP 1</b>Nov 2026</span>Product concept, platform vision, personas, user journeys, architecture and initial product roadmaps.</span></span>
+          <span class="gantt__ms gantt__ms--2"><button class="gantt__dot gantt__dot--2" type="button" aria-describedby="ms-7-2"><span class="sr-only">7 MVP 2, January 2027</span></button><span class="gantt__tip" id="ms-7-2" role="tooltip"><span class="gantt__tip-head"><b>7 · MVP 2</b>Jan 2027</span>Domain setup, core platform deployment, integration foundation, licences and platform documentation.</span></span>
+        </span></div></div>
         <div class="gantt__today"><span class="gantt__today-label">Today</span></div>
         </div>
       </div>
 
-      <div class="table-wrap card" data-reveal>
-        <table class="data-table data-table--stack">
-          <caption class="sr-only">Start date, MVP 1 and MVP 2 dates and key deliverables for each FOR3NSIQ project</caption>
-          <thead>
-            <tr><th scope="col">Project</th><th scope="col">Start</th><th scope="col">MVP 1</th><th scope="col">MVP 1 deliverables</th><th scope="col">MVP 2</th><th scope="col">MVP 2 deliverables</th></tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row"><a href="#project-2a"><span class="code-badge">2A</span>SAP PM Data Revitalisation</a></th><td data-label="Start"><span class="date-chip date-chip--start">Aug 2026</span></td><td data-label="MVP 1"><span class="date-chip">Oct 2026</span></td><td data-label="MVP 1 deliverables">Data assessment; FLOC and Equipment validation; BOM, task-list and maintenance-plan remediation.</td><td data-label="MVP 2"><span class="date-chip date-chip--2">Jan 2027</span></td><td data-label="MVP 2 deliverables">Long-text remediation; SCE governance; criticality and Shutdown/TA job-library consolidation.</td></tr>
-            <tr><th scope="row"><a href="#project-2b"><span class="code-badge">2B</span>Vision Analytics</a></th><td data-label="Start"><span class="date-chip date-chip--start">Aug 2026</span></td><td data-label="MVP 1"><span class="date-chip">Nov 2026</span></td><td data-label="MVP 1 deliverables">Pilot model configuration; anomaly and corrosion detection; integration, validation and UAT.</td><td data-label="MVP 2"><span class="date-chip date-chip--2">Jan 2027</span></td><td data-label="MVP 2 deliverables">Rollout to two additional sites; training, hypercare, offline capability and handover.</td></tr>
-            <tr><th scope="row"><a href="#project-3a"><span class="code-badge">3A</span>Asset Integrity</a></th><td data-label="Start"><span class="date-chip date-chip--start">Aug 2026</span></td><td data-label="MVP 1"><span class="date-chip">Dec 2026</span></td><td data-label="MVP 1 deliverables">Bokor integrity models; circuitisation, integrity mapping, risk prioritisation and recommendation-to-work workflow.</td><td data-label="MVP 2"><span class="date-chip date-chip--2">Apr 2027</span></td><td data-label="MVP 2 deliverables">Scale to KNNAG and third asset; optimised scheduling and integrated work-pack capability.</td></tr>
-            <tr><th scope="row"><a href="#project-4a"><span class="code-badge">4A</span>Maintenance &amp; Reliability</a></th><td data-label="Start"><span class="date-chip date-chip--start">Aug 2026</span></td><td data-label="MVP 1"><span class="date-chip">Dec 2026</span></td><td data-label="MVP 1 deliverables">Bokor asset-health models; failure-risk/RUL capability; AI-assisted RCFA and recommendation workflow.</td><td data-label="MVP 2"><span class="date-chip date-chip--2">Apr 2027</span></td><td data-label="MVP 2 deliverables">Scale to KNNAG and third asset; optimised scheduling, material readiness and integrated work packs.</td></tr>
-            <tr><th scope="row"><a href="#project-6a"><span class="code-badge">6A</span>Production Optimisation</a></th><td data-label="Start"><span class="date-chip date-chip--start">Aug 2026</span></td><td data-label="MVP 1"><span class="date-chip">Dec 2026</span></td><td data-label="MVP 1 deliverables">Bokor production models; contextualisation, dashboards, alerts, optimisation recommendations and UAT.</td><td data-label="MVP 2"><span class="date-chip date-chip--2">Apr 2027</span></td><td data-label="MVP 2 deliverables">Deploy and validate production-optimisation models at KNNAG and the third pilot asset.</td></tr>
-            <tr><th scope="row"><a href="#project-7"><span class="code-badge">7</span>Work Process Efficiency</a></th><td data-label="Start"><span class="date-chip date-chip--start">Aug 2026</span></td><td data-label="MVP 1"><span class="date-chip">Nov 2026</span></td><td data-label="MVP 1 deliverables">Product concept, platform vision, personas, user journeys, architecture and initial product roadmaps.</td><td data-label="MVP 2"><span class="date-chip date-chip--2">Jan 2027</span></td><td data-label="MVP 2 deliverables">Domain setup, core platform deployment, integration foundation, licences and platform documentation.</td></tr>
-          </tbody>
-        </table>
+      <!-- Programme progress. UPDATES ITSELF: main.js reads the latest figures that the FOR3NSIQ progress
+           report saves with every "Save to database" (the report's small "summary" field) and fills in this
+           block when the page opens. The numbers written below are the fallback, shown if the database
+           can't be reached (they are from the report saved on 12 Nov 2026). -->
+      <div class="progress" id="progress" data-reveal>
+        <div class="progress__head">
+          <div>
+            <h3 class="progress__title">Programme snapshot &amp; project progress</h3>
+            <p class="progress__asof"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg><span>As of <span data-prog-date>12 Nov 2026</span> · <span data-prog-src>actual against planned progress</span></span></p>
+          </div>
+          <a class="btn btn--primary" href="https://for3nsiq-management-progress-summar.vercel.app/" target="_blank" rel="noopener">View detailed progress <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only">(opens in a new tab)</span></a>
+        </div>
+        <div class="progress__grid">
+          <div class="snap">
+            <p class="snap__label">Overall FOR3NSIQ progress</p>
+            <p class="snap__actual"><span data-count="59" data-decimals="1" data-prog-actual>59.0</span>%</p>
+            <p class="snap__cap">Actual</p>
+            <div class="snap__bar" aria-hidden="true"><span style="--w:0.873" data-prog-bar></span></div>
+            <p class="snap__cap">Actual as % of plan</p>
+            <dl class="snap__figs">
+              <div><dt>Planned</dt><dd data-prog-plan>67.5%</dd></div>
+              <div><dt>Variance to plan</dt><dd data-prog-var>&minus;8.6 <small>pp</small></dd></div>
+            </dl>
+            <p class="snap__note" data-prog-note>Projects 2A, 2B, 3A, 4A, 6A and 7 (excluding CDF), weighted by task weight. 3A and 4A combine T.AI and IBM.</p>
+          </div>
+          <div class="pj card">
+            <p class="pj__head" aria-hidden="true"><span>Project</span><span>Actual / plan</span></p>
+            <ul class="pj__rows">
+              <li class="pj-row"><a class="pj-row__name" href="#project-2a"><span class="code-badge">2A</span>SAP PM Data Revitalisation</a><span class="pj-row__track" aria-hidden="true"><span class="pj-row__fill" style="--a:0.600"></span><span class="pj-row__plan" style="--p:0.602"></span></span><span class="pj-row__nums"><b>60.0%</b><span class="sr-only"> actual,</span> / 60.2%<span class="sr-only"> planned,</span> <span class="pj-row__d">&minus;0.2 pp</span></span></li>
+              <li class="pj-row"><a class="pj-row__name" href="#project-2b"><span class="code-badge">2B</span>Vision Analytics</a><span class="pj-row__track" aria-hidden="true"><span class="pj-row__fill" style="--a:0.553"></span><span class="pj-row__plan" style="--p:0.830"></span></span><span class="pj-row__nums"><b>55.3%</b><span class="sr-only"> actual,</span> / 83.0%<span class="sr-only"> planned,</span> <span class="pj-row__d">&minus;27.7 pp</span></span></li>
+              <li class="pj-row"><a class="pj-row__name" href="#project-3a"><span class="code-badge">3A</span>Asset Integrity <i class="pj-row__tag">T.AI + IBM</i></a><span class="pj-row__track" aria-hidden="true"><span class="pj-row__fill" style="--a:0.543"></span><span class="pj-row__plan" style="--p:0.586"></span></span><span class="pj-row__nums"><b>54.3%</b><span class="sr-only"> actual,</span> / 58.6%<span class="sr-only"> planned,</span> <span class="pj-row__d">&minus;4.2 pp</span></span></li>
+              <li class="pj-row"><a class="pj-row__name" href="#project-4a"><span class="code-badge">4A</span>Maintenance &amp; Reliability <i class="pj-row__tag">T.AI + IBM</i></a><span class="pj-row__track" aria-hidden="true"><span class="pj-row__fill" style="--a:0.589"></span><span class="pj-row__plan" style="--p:0.586"></span></span><span class="pj-row__nums"><b>58.9%</b><span class="sr-only"> actual,</span> / 58.6%<span class="sr-only"> planned,</span> <span class="pj-row__d pj-row__d--ahead">+0.4 pp</span></span></li>
+              <li class="pj-row"><a class="pj-row__name" href="#project-6a"><span class="code-badge">6A</span>Production Optimisation</a><span class="pj-row__track" aria-hidden="true"><span class="pj-row__fill" style="--a:0.661"></span><span class="pj-row__plan" style="--p:0.669"></span></span><span class="pj-row__nums"><b>66.1%</b><span class="sr-only"> actual,</span> / 66.9%<span class="sr-only"> planned,</span> <span class="pj-row__d">&minus;0.8 pp</span></span></li>
+              <li class="pj-row"><a class="pj-row__name" href="#project-7"><span class="code-badge">7</span>Work Process Efficiency</a><span class="pj-row__track" aria-hidden="true"><span class="pj-row__fill" style="--a:0.595"></span><span class="pj-row__plan" style="--p:0.765"></span></span><span class="pj-row__nums"><b>59.5%</b><span class="sr-only"> actual,</span> / 76.5%<span class="sr-only"> planned,</span> <span class="pj-row__d">&minus;17.0 pp</span></span></li>
+              <li class="pj-row pj-row--cdf"><a class="pj-row__name" href="#architecture"><span class="code-badge">CDF</span>Contextual Data Fusion</a><span class="pj-row__track" aria-hidden="true"><span class="pj-row__fill" style="--a:0.230"></span><span class="pj-row__plan" style="--p:0.300"></span></span><span class="pj-row__nums"><b>23.0%</b><span class="sr-only"> actual,</span> / 30.0%<span class="sr-only"> planned,</span> <span class="pj-row__d">&minus;7.0 pp</span></span></li>
+            </ul>
+            <p class="pj__legend" aria-hidden="true"><span><i class="pj__key pj__key--a"></i>Actual progress</span><span><i class="pj__key pj__key--p"></i>Planned position</span><span>pp = percentage points against plan</span></p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -442,6 +503,47 @@
     </div>
   </section>
 
+  <section class="section section--tint" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="cta-band" data-reveal>
+        <svg class="cta-band__mesh" width="220" height="170" viewBox="0 0 260 200" fill="none" aria-hidden="true">
+          <circle cx="50" cy="60" r="7" stroke="#fff" stroke-width="1.6"/><circle cx="130" cy="30" r="7" stroke="#fff" stroke-width="1.6"/>
+          <circle cx="210" cy="70" r="7" stroke="#fff" stroke-width="1.6"/><circle cx="90" cy="140" r="7" stroke="#fff" stroke-width="1.6"/>
+          <circle cx="185" cy="155" r="7" stroke="#fff" stroke-width="1.6"/>
+          <path d="M57 62 122 34M138 34 202 66M55 66 84 132M98 142 178 153M136 37 182 148" stroke="#fff" stroke-width="1.2"/>
+        </svg>
+        <div class="cta-band__text">
+          <h2 class="cta-band__title" id="cta-title">Explore a project in depth</h2>
+          <p>Each project page covers its target and how it will be achieved, the AI agents and models behind it, its workflow, and its MVP 1 and MVP 2 deliverables.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--on-dark btn--lg" href="#projects">Browse all projects <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost-dark btn--lg" href="#timeline">View the MVP timeline</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ============================================================ ABOUT US
+     Partners and the official announcement (opened from "About us" in the header). -->
+<article class="page info-page" id="about" data-page data-nav="about" data-title="About us" aria-labelledby="about-title">
+  <header class="project-hero">
+    <div class="container project-hero__grid">
+      <div class="project-hero__copy">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="#home">Home</a></li><li aria-current="page">About us</li></ol></nav>
+        <h1 class="project-title" id="about-title">About FOR3NSIQ</h1>
+        <p class="project-lead">FOR3NSIQ is the Production Phase of TriCipta AI, PETRONAS Carigali's AI delivery arm for Upstream, built through a strategic partnership with IBM Malaysia and Tridiagonal.ai. Meet the partners and the team behind it.</p>
+      </div>
+      <ul class="about-logos" aria-label="Partners">
+        <li><img src="assets/img/logo-petronas.png" width="280" height="285" alt="PETRONAS"></li>
+        <li><img src="assets/img/logo-ibm.png" width="360" height="145" alt="IBM"></li>
+        <li><img src="assets/img/logo-tridiagonal-ai.png" width="222" height="68" alt="Tridiagonal.ai"></li>
+      </ul>
+    </div>
+  </header>
+
   <!-- Partners -->
   <section class="section" id="partners" aria-labelledby="partners-title">
     <div class="container">
@@ -488,21 +590,100 @@
     </div>
   </section>
 
-  <!-- Press -->
+  <!-- Organisation structure (from the FOR3NSIQ organisation chart).
+       TO UPDATE: edit a name or team below; each team card is one <li class="org-team">. -->
+  <section class="section section--tint" id="organisation" aria-labelledby="org-title">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Organisation structure</p>
+        <h2 class="section-title" id="org-title">The team behind FOR3NSIQ</h2>
+        <p class="section-lead">A project lead and a workstream lead, with six project teams under them.</p>
+      </div>
+      <div class="org" data-reveal>
+        <ul class="org__tree">
+          <li class="org__lead">
+            <div class="org__box"><p class="org__role">Project Lead</p><p class="org__name">Ina Czarina BT Arief Tham</p></div>
+            <ul>
+              <li class="org__lead">
+                <div class="org__box"><p class="org__role">Workstream Lead</p><p class="org__name">Aaron Subash George</p></div>
+                <ul class="org__teams" aria-label="Project teams">
+                  <li class="org-team">
+                    <div class="org-team__head"><p class="org-team__code">Project 2A</p><h3 class="org-team__name">AI-Driven SAP Master Data Revitalisation</h3></div>
+                    <div class="org-team__body"><p class="org-team__label">Leads</p><p class="org-team__people">M Azrul Adha B M Sohaimi</p><p class="org-team__people">Nurul Aini Bt M Faudzi</p></div>
+                  </li>
+                  <li class="org-team">
+                    <div class="org-team__head"><p class="org-team__code">Projects 2B &amp; 3A</p><h3 class="org-team__name">Vision Analytics / AI-Driven Asset Integrity</h3></div>
+                    <div class="org-team__body"><p class="org-team__label">Lead</p><p class="org-team__people">Seng Leng Heng</p></div>
+                  </li>
+                  <li class="org-team">
+                    <div class="org-team__head"><p class="org-team__code">Project 4A</p><h3 class="org-team__name">AI-Driven Maintenance &amp; Reliability</h3></div>
+                    <div class="org-team__body"><p class="org-team__label">Lead</p><p class="org-team__people">Belal Magdy Fathalla</p></div>
+                  </li>
+                  <li class="org-team">
+                    <div class="org-team__head"><p class="org-team__code">Project 6A</p><h3 class="org-team__name">AI-Driven Production Optimisation &amp; Planning</h3></div>
+                    <div class="org-team__body"><p class="org-team__label">Lead</p><p class="org-team__people">Dahnaraj Lachemykanden</p></div>
+                  </li>
+                  <li class="org-team">
+                    <div class="org-team__head"><p class="org-team__code">Project 7 &amp; TA</p><h3 class="org-team__name">Work Process Efficiency Improvement / Turnaround</h3></div>
+                    <div class="org-team__body"><p class="org-team__label">Lead</p><p class="org-team__people">M Azrul Adha B M Sohaimi</p></div>
+                  </li>
+                  <li class="org-team">
+                    <div class="org-team__head"><p class="org-team__code">Project CDF</p><h3 class="org-team__name">Contextual Data Fusion</h3></div>
+                    <div class="org-team__body"><p class="org-team__label">Lead</p><p class="org-team__people">Gan Denson</p></div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <nav class="container pager" aria-label="Page navigation">
+    <a class="pager__link pager__link--prev" href="#home"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg><span><small>Back to</small>Home</span></a>
+    <a class="pager__link pager__link--next" href="#highlights"><span><small>See also</small>Key highlights &amp; achievements</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </nav>
+</article>
+
+
+<!-- ============================================================ KEY HIGHLIGHTS
+     Its own page (opened from "Highlights" in the header). -->
+<article class="page info-page" id="highlights" data-page data-nav="highlights" data-title="Key highlights & achievements" aria-labelledby="hlp-title">
+  <header class="project-hero">
+    <div class="container project-hero__grid">
+      <div class="project-hero__copy">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="#home">Home</a></li><li aria-current="page">Key highlights &amp; achievements</li></ol></nav>
+        <h1 class="project-title" id="hlp-title">Key highlights &amp; achievements</h1>
+        <p class="project-lead">The official announcement of FOR3NSIQ, and the workshops, partnerships and milestones along the way.</p>
+      </div>
+      <dl class="hlp-facts">
+        <div><dt>Agreement signed</dt><dd><time datetime="2026-06-29">29 Jun 2026</time></dd></div>
+        <div><dt>Official announcement published</dt><dd><time datetime="2026-07-08">8 Jul 2026</time></dd></div>
+        <div><dt>Highlights so far</dt><dd>6 <small>Mar – Oct 2026</small></dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <!-- Official announcement. The date on the article is when PETRONAS published it (8 July 2026);
+       the agreement itself was signed on 29 June 2026. -->
   <section class="section section--tint" id="press" aria-labelledby="press-title">
     <div class="container">
       <div class="section-head" data-reveal>
-        <p class="eyebrow">Press release</p>
+        <p class="eyebrow">Official announcement</p>
         <h2 class="section-title" id="press-title">The official announcement of FOR3NSIQ</h2>
       </div>
       <article class="press-card card" data-reveal>
-        <a class="press-card__media zoom-figure" href="assets/img/press-1200.jpg" data-lightbox data-caption="FOR3NSIQ signing ceremony: PETRONAS Carigali, IBM Malaysia and Tridiagonal.ai, 8 July 2026.">
+        <a class="press-card__media zoom-figure" href="assets/img/press-1200.jpg" data-lightbox data-caption="Signing of the third Joint Development Agreement by PETRONAS Carigali, IBM Malaysia and Tridiagonal.ai (signed 29 June 2026). From the PETRONAS media release published 8 July 2026.">
           <img src="assets/img/press-640.jpg" srcset="assets/img/press-640.jpg 640w, assets/img/press-1200.jpg 1200w" sizes="(min-width: 900px) 420px, 92vw" width="640" height="427" alt="PETRONAS Carigali, IBM Malaysia and Tridiagonal.ai signing ceremony for the FOR3NSIQ agreement" loading="lazy" decoding="async">
           <span class="zoom-figure__hint"><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg> Enlarge</span>
         </a>
         <div class="press-card__body">
-          <p class="press-card__date"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg> 8 July 2026</p>
-          <p>On 8 July 2026, PETRONAS Carigali signed the third Joint Development Agreement with IBM Malaysia and Tridiagonal.ai, extending TriCipta AI into Surface Equipment Optimisation with AI.</p>
+          <dl class="press-card__dates">
+            <div><dt><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Article published</dt><dd><time datetime="2026-07-08">8 July 2026</time></dd></div>
+            <div><dt><svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg>Agreement signed</dt><dd><time datetime="2026-06-29">29 June 2026</time></dd></div>
+          </dl>
+          <p>PETRONAS Carigali signed the third Joint Development Agreement with IBM Malaysia and Tridiagonal.ai on 29 June 2026, extending TriCipta AI into Surface Equipment Optimisation with AI. PETRONAS announced it in a media release on 8 July 2026.</p>
           <details class="more more--small">
             <summary class="more__toggle"><span class="more__label-open">Read more</span><span class="more__label-close">Read less</span><svg class="icon more__chev" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
             <p class="more__body">At the signing, PETRONAS Carigali CEO Hazli Sham Kassim said the company is "embedding it to drive bottom-line performance, asset reliability, and speed-to-value."</p>
@@ -517,11 +698,11 @@
        TO ADD AN EVENT: copy one <article class="hl-card"> (keep date order, update the "n of N" labels),
        add a matching rail node (--pos = share of the way from the first to the last date, --pm = even
        spacing used on phones), and put the photos in assets/img (a ~720px and a ~1080px version). -->
-  <section class="section section--dark hl" id="highlights" aria-labelledby="highlights-title" data-highlights>
+  <section class="section section--dark hl" id="hl-timeline" aria-labelledby="highlights-title" data-highlights>
     <div class="container">
       <div class="section-head section-head--split" data-reveal>
         <div>
-          <p class="eyebrow eyebrow--on-dark">Key highlights &amp; achievements</p>
+          <p class="eyebrow eyebrow--on-dark">Key highlights</p>
           <h2 class="section-title" id="highlights-title">The FOR3NSIQ journey so far</h2>
         </div>
         <div>
@@ -652,27 +833,11 @@
     <p class="sr-only" aria-live="polite" data-hl-live></p>
   </section>
 
-  <section class="section section--tint" aria-labelledby="cta-title">
-    <div class="container">
-      <div class="cta-band" data-reveal>
-        <svg class="cta-band__mesh" width="220" height="170" viewBox="0 0 260 200" fill="none" aria-hidden="true">
-          <circle cx="50" cy="60" r="7" stroke="#fff" stroke-width="1.6"/><circle cx="130" cy="30" r="7" stroke="#fff" stroke-width="1.6"/>
-          <circle cx="210" cy="70" r="7" stroke="#fff" stroke-width="1.6"/><circle cx="90" cy="140" r="7" stroke="#fff" stroke-width="1.6"/>
-          <circle cx="185" cy="155" r="7" stroke="#fff" stroke-width="1.6"/>
-          <path d="M57 62 122 34M138 34 202 66M55 66 84 132M98 142 178 153M136 37 182 148" stroke="#fff" stroke-width="1.2"/>
-        </svg>
-        <div class="cta-band__text">
-          <h2 class="cta-band__title" id="cta-title">Explore a project in depth</h2>
-          <p>Each project page covers its target and how it will be achieved, the AI agents and models behind it, its workflow, and its MVP 1 and MVP 2 deliverables.</p>
-        </div>
-        <div class="cta-band__actions">
-          <a class="btn btn--on-dark btn--lg" href="#projects">Browse all projects <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn--ghost-dark btn--lg" href="#timeline">View the MVP timeline</a>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
+  <nav class="container pager" aria-label="Page navigation">
+    <a class="pager__link pager__link--prev" href="#home"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg><span><small>Back to</small>Home</span></a>
+    <a class="pager__link pager__link--next" href="#about"><span><small>See also</small>About us</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </nav>
+</article>
 
 
 <!-- ============================================================ PROJECT CAROUSEL
@@ -914,8 +1079,8 @@
     <div class="container">
       <div class="section-head" data-reveal><p class="eyebrow">Timeline</p><h2 class="section-title" id="p2a-timeline-title">MVP 1 and MVP 2</h2></div>
       <ol class="mvp-cards" data-reveal-stagger>
-        <li class="mvp-card"><p class="mvp-card__label">MVP 1</p><p class="mvp-card__date">Oct 2026</p><p>Data assessment; FLOC and Equipment validation; BOM, task-list and maintenance-plan remediation.</p></li>
-        <li class="mvp-card mvp-card--2"><p class="mvp-card__label">MVP 2</p><p class="mvp-card__date">Jan 2027</p><p>Long-text remediation; SCE governance; criticality and Shutdown/TA job-library consolidation.</p></li>
+        <li class="mvp-card"><p class="mvp-card__label">MVP 1</p><p class="mvp-card__date">Oct 2026</p><p>Deliver SAP data remediation using 6 agents for Bokor.</p></li>
+        <li class="mvp-card mvp-card--2"><p class="mvp-card__label">MVP 2</p><p class="mvp-card__date">Jan 2027</p><p>Deliver SAP data remediation using 6 agents for the remaining 25 assets.</p></li>
       </ol>
     </div>
   </section>
@@ -1753,10 +1918,11 @@
       <ul>
         <li><a href="#targets">Targets</a></li>
         <li><a href="#timeline">MVP timeline</a></li>
+        <li><a href="#progress">Programme progress</a></li>
         <li><a href="#architecture">Architecture</a></li>
-        <li><a href="#partners">Partners</a></li>
-        <li><a href="#press">Press release</a></li>
         <li><a href="#highlights">Highlights</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#press">Press release</a></li>
       </ul>
     </nav>
   </div>
