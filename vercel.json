@@ -13,6 +13,6 @@
     },
     { "source": "/", "headers": [{ "key": "Cache-Control", "value": "private, no-store" }] },
     { "source": "/login", "headers": [{ "key": "Cache-Control", "value": "no-store" }] },
-    { "source": "/assets/img/(.*)", "headers": [{ "key": "Cache-Control", "value": "private, max-age=86400" }] }
+    { "source": "/assets/img/(.*)", "headers": [{ "key": "Cache-Control", "value": "private, no-cache" }] }
   ]
 }
