@@ -36,7 +36,9 @@
     'p2b-agents': 'p2b3a-agents', 'p3a-models': 'p2b3a-models', 'p2b-delivers': 'p2b3a-delivers', 'p3a-delivers': 'p2b3a-delivers',
     'p2b-timeline': 'p2b3a-timeline', 'p3a-timeline': 'p2b3a-timeline', 'p4a-shift': 'p4a-upd', 'p4a-value': 'p4a-prevent',
     // Infrastructure and HSE & PSM were "supporting solutions"; they are now Projects 1 and 5
-    'solution-gai': 'project-1', 'solution-hse': 'project-5'
+    'solution-gai': 'project-1', 'solution-hse': 'project-5',
+    // The 6A "opportunity pool" section and its 2 pop-ups were removed (19 Nov 2026); links land on KPI 1 instead
+    'p6a-pathway': 'p6a-uplift', 'opp-sand': 'p6a-uplift', 'opp-gaslift': 'p6a-uplift'
   };
   // The project pages, in tab order (used for the tabs, left/right slides and swipes).
   var PROJECT_ORDER = ['project-1', 'project-2a', 'project-2b-3a', 'project-4a', 'project-5', 'project-6a', 'project-7', 'project-cdf'];
