@@ -28,11 +28,18 @@
   var baseTitle = document.title;
   var aliases = {
     '': 'home', top: 'home', overview: 'home',
-    'solution-sap': 'project-2a', 'solution-vision': 'project-2b', 'solution-integrity': 'project-3a',
-    'solution-maintenance': 'project-4a', 'solution-production': 'project-6a', 'solution-workprocess': 'project-7'
+    'solution-sap': 'project-2a', 'solution-vision': 'project-2b-3a', 'solution-integrity': 'project-2b-3a',
+    'solution-maintenance': 'project-4a', 'solution-production': 'project-6a', 'solution-workprocess': 'project-7',
+    // 2B and 3A now share one page: their old page and section links land on it
+    'project-2b': 'project-2b-3a', 'project-3a': 'project-2b-3a',
+    'p2b-targets': 'p2b3a-targets', 'p3a-targets': 'p2b3a-targets', 'p2b-workflow': 'p2b3a-how', 'p3a-how': 'p2b3a-how',
+    'p2b-agents': 'p2b3a-agents', 'p3a-models': 'p2b3a-models', 'p2b-delivers': 'p2b3a-delivers', 'p3a-delivers': 'p2b3a-delivers',
+    'p2b-timeline': 'p2b3a-timeline', 'p3a-timeline': 'p2b3a-timeline', 'p4a-shift': 'p4a-upd', 'p4a-value': 'p4a-prevent',
+    // Infrastructure and HSE & PSM were "supporting solutions"; they are now Projects 1 and 5
+    'solution-gai': 'project-1', 'solution-hse': 'project-5'
   };
-  // The six project pages, in tab order (used for the tabs, left/right slides and swipes).
-  var PROJECT_ORDER = ['project-2a', 'project-2b', 'project-3a', 'project-4a', 'project-6a', 'project-7'];
+  // The project pages, in tab order (used for the tabs, left/right slides and swipes).
+  var PROJECT_ORDER = ['project-1', 'project-2a', 'project-2b-3a', 'project-4a', 'project-5', 'project-6a', 'project-7', 'project-cdf'];
 
   function resolve(hash) {
     var id = decodeURIComponent((hash || '').replace(/^#/, ''));
@@ -497,16 +504,38 @@
     });
   })();
 
+  /* ------------------------------------- MVP cards: "Completed" once the month is over */
+  // Each MVP card on the project pages carries its month (data-mvp="2026-10"). From the first day of the
+  // following month it shows a "Completed" tag, so the pages stay current without editing.
+  // window.__for3nsiqToday (a Date) can stand in for today's date when testing.
+  (function () {
+    var now = window.__for3nsiqToday instanceof Date ? window.__for3nsiqToday : new Date();
+    $all('.mvp-card[data-mvp]').forEach(function (card) {
+      var m = /^(\d{4})-(\d{2})$/.exec(card.dataset.mvp || '');
+      if (!m) return;
+      if (now < new Date(+m[1], +m[2], 1)) return; // month index +m[2] = the month after the MVP month
+      var date = card.querySelector('.mvp-card__date');
+      if (!date || date.querySelector('.mvp-card__status')) return;
+      card.classList.add('is-complete');
+      var tag = document.createElement('span');
+      tag.className = 'mvp-card__status';
+      tag.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Completed';
+      date.appendChild(document.createTextNode(' '));
+      date.appendChild(tag);
+    });
+  })();
+
   /* ------------------------------------------------ Programme progress (live) */
   // Every "Save to database" in the FOR3NSIQ progress report also saves a small "summary" (overall and
   // per-project actual / planned %). This reads only that field (public read, no key, about 1 KB) and
   // refreshes the progress block. If it can't be read, the figures written in the page stay.
   var PROGRESS_URL = 'https://firestore.googleapis.com/v1/projects/jda3-9c0c5/databases/(default)/documents/progressReport/current?mask.fieldPaths=summary';
   var PROGRESS_PROJECTS = { // the site's names and pages for each project code in the report
-    '2A': ['SAP PM Data Revitalisation', '#project-2a'], '2B': ['Vision Analytics', '#project-2b'],
-    '3A': ['Asset Integrity', '#project-3a'], '4A': ['Maintenance & Reliability', '#project-4a'],
+    '1': ['Infrastructure with Generative AI', '#project-1'],
+    '2A': ['SAP PM Data Revitalisation', '#project-2a'], '2B': ['Vision Analytics', '#project-2b-3a'],
+    '3A': ['Asset Integrity', '#project-2b-3a'], '4A': ['Maintenance & Reliability', '#project-4a'],
     '6A': ['Production Optimisation', '#project-6a'], '7': ['Work Process Efficiency', '#project-7'],
-    'CDF': ['Contextual Data Fusion', '#architecture']
+    'CDF': ['Contextual Data Fusion', '#project-cdf']
   };
   var progressBox = document.getElementById('progress');
 
