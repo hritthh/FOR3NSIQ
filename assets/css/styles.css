@@ -1779,6 +1779,11 @@ html:not(.js) .hl-controls { display: none; }
   background: var(--gradient-text-light); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .deliver-grid > li p { font-weight: 600; line-height: 1.45; color: var(--color-text); }
+/* 3 per row with the last, shorter row centred (6A: 8 items = 3 + 3 + 2) */
+@media (min-width: 1024px) {
+  .deliver-grid--center { display: flex; flex-wrap: wrap; justify-content: center; }
+  .deliver-grid--center > li { flex: 0 0 calc((100% - 2 * var(--space-4)) / 3); }
+}
 .deliver-grid--list { grid-template-columns: 1fr !important; gap: var(--space-2); }
 .deliver-grid--list > li { flex-direction: row; align-items: baseline; gap: var(--space-3); padding: var(--space-3) var(--space-4); background: var(--color-bg); box-shadow: none; }
 .deliver-grid--list > li::before { display: none; }
