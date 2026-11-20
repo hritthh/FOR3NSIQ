@@ -1573,6 +1573,18 @@ html:not(.js) .hl-controls { display: none; }
 .i2cm-seq li:not(:last-child)::after { content: ""; position: absolute; top: 50%; right: -1.05em; width: 0.45em; height: 0.45em; margin-top: -0.22em; border-top: 2px solid var(--teal-500); border-right: 2px solid var(--teal-500); transform: rotate(45deg); }
 .i2cm-note { padding: 0 var(--space-5) var(--space-5); font-size: var(--fs-xs); color: var(--color-text-muted); }
 @media (max-width: 560px) { .i2cm-flow { padding: var(--space-4); } .i2cm-panel__head { padding: var(--space-4); } }
+/* I2CM, simplified (20 Nov 2026): 2 full-width boxes (current, to be); steps run left to right on wide screens */
+@media (min-width: 1000px) { .i2cm--row { grid-template-columns: minmax(0, 1fr); } }
+.i2cm--row .i2cm-flow { gap: var(--space-4); padding: var(--space-4) var(--space-5); }
+.i2cm--row .i2cm-step { padding: var(--space-3) var(--space-4); }
+.i2cm--row .i2cm-step h4 { font-size: var(--fs-sm); }
+.i2cm--row .i2cm-step + .i2cm-step::before { top: calc(var(--space-4) / -2 - 7px); }
+@media (min-width: 900px) {
+  .i2cm--row .i2cm-flow { grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: var(--space-5); }
+  .i2cm--row .i2cm-step { display: flex; flex-direction: column; justify-content: center; }
+  .i2cm--row .i2cm-step + .i2cm-step::before { top: 50%; left: calc(var(--space-5) / -2 - 7px); margin: -4.5px 0 0; transform: rotate(-45deg); }
+  .i2cm--row .i2cm-note { padding-top: 0; }
+}
 /* Footnote marker + disclaimer box (6A target) */
 .footnote-ref { margin-left: 0.15em; color: var(--teal-400); font-weight: 700; text-decoration: none; }
 .footnote-ref:hover { text-decoration: underline; }
