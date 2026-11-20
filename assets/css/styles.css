@@ -1255,6 +1255,7 @@ html:not(.js) .hl-controls { display: none; }
 
 /* Model families */
 .model-grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+@media (min-width: 1200px) { .model-grid--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
 @media (min-width: 1100px) { .model-grid--4 { grid-template-columns: repeat(4, 1fr); } }
 .model-card { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); }
 .model-card__code { align-self: flex-start; padding: 0.25em 0.65em; border-radius: var(--radius-sm); background: linear-gradient(135deg, var(--teal-600), var(--teal-800)); color: #fff; font-family: var(--font-mono); font-size: var(--fs-xs); font-weight: 600; }
