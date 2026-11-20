@@ -707,6 +707,8 @@ button { font: inherit; color: inherit; }
 .vp-card__text { margin-top: var(--space-2); font-size: var(--fs-sm); color: var(--color-on-dark-muted); }
 .vp-card .impact-card__tag { padding-top: var(--space-4); }
 .vp-card__note { margin-top: var(--space-3); font-size: var(--fs-xs); font-style: italic; color: var(--color-on-dark-muted); }
+/* Production Optimisation: KPI 1 and KPI 2 stacked in the right column (side by side on tablets) */
+@media (min-width: 760px) and (max-width: 1099px) { .vp__cards--stack { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 /* Production Optimisation: one feature card that fills the tall right column */
 .vp-card--feature { justify-content: center; }
 .vp-card--feature .impact-card__value { font-size: clamp(3rem, 2.4rem + 2.4vw, 4.5rem); }
@@ -1473,14 +1475,17 @@ html:not(.js) .hl-controls { display: none; }
 .finding-stats dd small { font-size: 0.62em; font-weight: 700; color: var(--teal-600); white-space: nowrap; }
 @media (max-width: 400px) { .finding-stats { grid-template-columns: 1fr; } }
 /* 6A (4% Production Uplift Executive Pack): deferment bars (full width = 6% of total deferment; the orange
-   line is the 2% target), the capture logic, the M01 / M02 conversion flow and the 4-step decision loop */
+   line is the target, set by --target on .wf--defer: 4% since the 20 Nov 2026 pack), the capture logic, the M01 / M02 conversion flow and the 4-step decision loop */
 .wf--defer .wf__track { position: relative; width: calc(var(--total) / 6 * 100%); }
 .wf--defer .wf__seg { display: flex; align-items: center; justify-content: center; min-width: 0; overflow: hidden; color: #fff; font-size: var(--fs-sm); font-weight: 700; white-space: nowrap; }
 .wf--defer .wf__seg--1 { color: var(--teal-950); }
 .wf--defer .wf__total { min-width: 10.5em; }
 .wf--defer .wf__total strong { font-size: var(--fs-xl); }
 @media (max-width: 599px) { .wf--defer .wf__row { grid-template-columns: 1fr; } .wf--defer .wf__total { min-width: 0; } .wf--defer .wf__seg { font-size: var(--fs-xs); } }
-.wf__mark { position: absolute; top: -8px; bottom: -8px; left: calc(2 / var(--total) * 100%); width: 3px; margin-left: -1.5px; border-radius: 2px; background: #d9702a; }
+.wf__mark { position: absolute; top: -8px; bottom: -8px; left: calc(var(--target) / var(--total) * 100%); width: 3px; margin-left: -1.5px; border-radius: 2px; background: #d9702a; }
+/* the target band above each bar: from 0 to the target, on the same 6% scale as the bars */
+.wf--defer .wf__band { grid-column: 1; width: calc(var(--target) / 6 * 100%); padding: 0.35em 0.75em; border: 1px dashed var(--teal-400); border-radius: 6px; background: var(--teal-050); color: var(--teal-900); font-size: var(--fs-xs); font-weight: 600; line-height: 1.35; text-align: center; }
+.wf--defer .wf__track { grid-column: 1; }
 .wf__mark-key { display: inline-block; width: 3px; height: 14px; border-radius: 2px; background: #d9702a; }
 .wf__title small { display: block; margin-top: 2px; font-family: var(--font-body); font-size: var(--fs-sm); font-weight: 500; color: var(--color-text-muted); }
 .capture { display: grid; overflow: hidden; margin-top: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); box-shadow: var(--shadow-sm); }
