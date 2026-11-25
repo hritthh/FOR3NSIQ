@@ -658,7 +658,9 @@
   }
   $all('dialog.modal').forEach(function (d) {
     d.addEventListener('cancel', function (e) { e.preventDefault(); closeDialog(d); }); // Esc key
-    d.addEventListener('close', function () { body.classList.remove('dialog-open'); });
+    d.addEventListener('close', function () {  // a picture enlarged from inside a pop-up leaves the pop-up open
+      if (!document.querySelector('dialog[open]')) body.classList.remove('dialog-open');
+    });
     d.addEventListener('click', function (e) { if (e.target === d) closeDialog(d); });  // backdrop
   });
 
